@@ -9,6 +9,7 @@ using System.Media;
 using System.IO;
 using System.Reflection;
 using System.ComponentModel.Design;
+using System.Diagnostics;
 
 namespace Snake
 {
@@ -276,14 +277,7 @@ namespace Snake
         }
 
         // bonus score text 
-        public void BonusScoreText(string scoretxt, int x)
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            int setheight = Console.WindowTop;
-            int setwidth = ((Console.WindowWidth - scoretxt.Length) / 3);
-            Console.SetCursorPosition(setwidth, setheight);
-            Console.WriteLine(scoretxt);
-        }
+
 
         // Game over text at center of screen
         // Eddie
@@ -316,6 +310,15 @@ namespace Snake
             int setwidth = ((Console.WindowWidth - plname.Length) / 2); ;
             Console.SetCursorPosition(setwidth, setheight);
             Console.WriteLine(plname);
+        }
+        // draw time
+        public void TPlace(string tplace)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            int setheight = Console.WindowTop + 2;
+            int setwidth = ((Console.WindowWidth - tplace.Length) / 2); ;
+            Console.SetCursorPosition(setwidth, setheight);
+            Console.WriteLine(tplace);
         }
 
         // create player's score txt file
@@ -397,8 +400,12 @@ namespace Snake
             Program snake = new Program();
             //play main menu music
             MenuMusic();
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+           
+                
 
-            List<string> menuListing = new List<string>()
+                List<string> menuListing = new List<string>()
 
             {
                 "Start Game",
@@ -442,6 +449,7 @@ namespace Snake
                         string scoretxt = "Score: 0";
                         snake.ScoreText(scoretxt, -5);
                         snake.PNames("Name: " + PlayersName);
+                       
 
 
                         Queue<Position> snakeElements = new Queue<Position>();
@@ -467,6 +475,8 @@ namespace Snake
 
                         while (true)
                         {
+                            TimeSpan timeSpan = TimeSpan.FromSeconds(Convert.ToInt32(stopwatch.Elapsed.TotalSeconds));
+                            snake.TPlace("Time: " + timeSpan);
                             negativePoints++;
 
                             // old check user input
@@ -511,13 +521,16 @@ namespace Snake
                                 string pointtxt = PlayersName + " your points are: " + score;
                                 snake.GameOverText(pointtxt, 0);
 
+                                string timertxt = PlayersName +" your total play time is :"+ timeSpan;
+                                snake.GameOverText(timertxt, -1);
+
                                 //------------third line--------------
                                 string exittxt = "Press Enter to Exit";
-                                snake.GameOverText(exittxt, -1);
+                                snake.GameOverText(exittxt, -2);
 
                                 ////------------exit line--------------
                                 string continuetxt = "Press any key to continue . . .";
-                                snake.EnterExit(continuetxt, -2);
+                                snake.EnterExit(continuetxt, -3);
                             }
 
                             Console.SetCursorPosition(snakeHead.col, snakeHead.row);
