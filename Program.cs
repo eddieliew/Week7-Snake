@@ -529,7 +529,7 @@ namespace Snake
                                 snake.GameOverText(exittxt, -2);
 
                                 ////------------exit line--------------
-                                string continuetxt = "Press any key to continue . . .";
+                                string continuetxt = "Press any key to continue . . . .";
                                 snake.EnterExit(continuetxt, -3);
                             }
 
