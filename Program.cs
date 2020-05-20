@@ -619,7 +619,11 @@ namespace Snake
                             {
                                 score += 150;
                                 UpdateScore();
-
+                                DrawFood();
+                                while (snakeElements.Contains(food) || obstacles.Contains(food)) ;
+                                lastFoodTime = Environment.TickCount;
+                                Console.SetCursorPosition(food.col, food.row);
+                                Position obstacle = new Position();
                                 // If reach score == winScore(10500), WIN   
                                 if (score >= winScore)
                                 {

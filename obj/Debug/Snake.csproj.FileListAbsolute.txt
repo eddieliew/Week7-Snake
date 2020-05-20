@@ -52,3 +52,10 @@ C:\Users\eddieliewjiacing\Desktop\Week6-Snake-Eddie-MainMenu - Copy\obj\Debug\Sn
 C:\Users\eddieliewjiacing\Desktop\Week6-Snake-Eddie-MainMenu - Copy\obj\Debug\Snake.csproj.CoreCompileInputs.cache
 C:\Users\eddieliewjiacing\Desktop\Week6-Snake-Eddie-MainMenu - Copy\obj\Debug\Snake.exe
 C:\Users\eddieliewjiacing\Desktop\Week6-Snake-Eddie-MainMenu - Copy\obj\Debug\Snake.pdb
+C:\Users\ljuny\OneDrive\Desktop\passtask7_dp1\Week7-Snake\bin\Debug\Snake.exe.config
+C:\Users\ljuny\OneDrive\Desktop\passtask7_dp1\Week7-Snake\bin\Debug\Snake.exe
+C:\Users\ljuny\OneDrive\Desktop\passtask7_dp1\Week7-Snake\bin\Debug\Snake.pdb
+C:\Users\ljuny\OneDrive\Desktop\passtask7_dp1\Week7-Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+C:\Users\ljuny\OneDrive\Desktop\passtask7_dp1\Week7-Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+C:\Users\ljuny\OneDrive\Desktop\passtask7_dp1\Week7-Snake\obj\Debug\Snake.exe
+C:\Users\ljuny\OneDrive\Desktop\passtask7_dp1\Week7-Snake\obj\Debug\Snake.pdb
